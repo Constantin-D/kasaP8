@@ -1,0 +1,34 @@
+@use "../../sass/variables" as *;
+
+.tag-list {
+    gap: 10px;
+
+    .tag {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        background-color: $color-primary;
+        color: $color-tertiary;
+        // width: 115px;
+        height: 25px;
+        padding: 3px 20px;
+        border: 0.5px solid $color-primary;
+        border-radius: 10px;
+        // margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .tag-list {
+
+        .tag {
+            font-size: 10px;
+            height: 18px;
+            padding: 3px 15px;
+            border-radius: 5px;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.rating-star {
+    display: flex;
+    gap: 15px;
+
+    img {
+        width: 25px;
+        height: 24px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .rating-star {
+        gap: 10px;
+
+        img {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}

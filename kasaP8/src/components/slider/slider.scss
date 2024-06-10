@@ -1,0 +1,80 @@
+@use "../../sass/variables" as *;
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1240px; 
+    height: 415px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 25px; 
+
+    .slider-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 40px;
+            height: 75px;
+        }
+    }
+
+    .left-arrow {
+        left: 10px;
+    }
+
+    .right-arrow {
+        right: 10px;
+    }
+
+    .slider-index {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $color-tertiary;
+        font-size: 18px;
+        font-weight: 500;
+        padding-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .slider {
+        height: 255px;
+        border-radius: 10px;
+
+        .slider-image {
+            object-fit: cover;
+        }
+
+        .left-arrow,
+        .right-arrow {
+            padding: 5px;
+
+            img {
+                width: 24px;
+                height: 30px;
+            }
+        }
+
+        .slider-index {
+            display: none;
+        }
+    }
+}

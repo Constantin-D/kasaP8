@@ -1,0 +1,53 @@
+@use "../../sass/variables" as *;
+
+.host-info {
+    display: flex;
+    align-items: center;
+    // margin-bottom: 1rem;
+
+    .host-name {
+        display: flex;
+        align-items: center;
+
+        p {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-right: 10px;
+            margin: 0;
+
+            .first-name,
+            .last-name {
+                font-size: 18px;
+                font-weight: 500;
+                color: $color-primary;
+                margin: 0;
+            }
+        }
+    }
+
+    .host-picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .host-info {
+        .host-name {
+            p {
+                .first-name,
+                .last-name {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .host-picture {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

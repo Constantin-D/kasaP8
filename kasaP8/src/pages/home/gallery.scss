@@ -1,0 +1,18 @@
+@use "../../sass/variables" as *;
+
+.gallery {
+    background-color: $background-gallery;
+    border-radius: 1.2rem;
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+
+    @media screen and (max-width: 560px) {
+        background-color: white;
+        margin-bottom: 25px;
+    }
+}
