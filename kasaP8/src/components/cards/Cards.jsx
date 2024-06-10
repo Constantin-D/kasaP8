@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import "./cards.scss";
 
 const Cards = ({ id, image, name }) => {
     return (
-        <div className="Cards">
+        <div className="cards">
             <Link to={`/apartment/${id}`} className="card-link">
                 <img src={image} alt="Image de la location" />
                 <div className="card-info">

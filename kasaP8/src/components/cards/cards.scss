@@ -1,9 +1,10 @@
 @use "../../sass/variables" as *;
+@use "../../sass/mixins" as *;
 
-.Cards {
+.cards {
     width: 100%;
-    max-width: 300px;
-    height: 300px;
+    max-width: 340px;
+    height: 340px;
     border: 1px solid transparent;
     border-radius: 0.6rem;
     cursor: pointer;
@@ -21,30 +22,24 @@
         position: absolute;
         bottom: 0%;
         left: 34%;
-        transform: translateX(-50%);
-        text-align: center;
-        background: linear-gradient(to bottom,
-                rgba(0, 0, 0, 0.01) 0%,
-                rgba(0, 0, 0, 0.03) 50%,
-                rgba(0, 0, 0, 0.05) 100%);
-        border-radius: 0.3rem;
-        // padding: 0.3rem 0.5rem;
-        display: inline-block;
+        @include gradient-box;
     }
 
     h3 {
         color: $color-tertiary;
-        font-size: 17px;
+        font-size: 16px;
         font-weight: 300;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
 
     @media screen and (max-width: 560px) {
-        max-width: 400px;
-        height: 400px;
+        .cards {
+            max-width: 335px;
+            height: 255px;
+        }
 
         h3 {
-            font-size: 18px;
+            font-size: 16px;
         }
     }
 }

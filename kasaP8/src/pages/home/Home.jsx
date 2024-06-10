@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import banner from "../../assets/images/Banner.png";
 import Banner from "../../components/banner/Banner";
 import Cards from "../../components/cards/Cards";
-import "./home-container.scss";
 import "./gallery.scss";
+import "./home-container.scss";
 
 const Home = () => {
     const [RentalHouses, setRentalHouses] = useState([]);
@@ -24,7 +24,11 @@ const Home = () => {
     }, []);
     return (
         <div className="home-container">
-            <Banner image={banner} title="Chez vous, partout et ailleurs" className="banner-home"/>
+            <Banner
+                image={banner}
+                title="Chez vous, partout et ailleurs"
+                className="banner-home"
+            />
             <div className="gallery">
                 {RentalHouses.map((rentalHouse) => (
                     <Cards
