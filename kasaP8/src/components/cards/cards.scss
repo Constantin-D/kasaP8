@@ -2,26 +2,33 @@
 @use "../../sass/mixins" as *;
 
 .cards {
+    // display: flex;
+    // flex-wrap: wrap;
+    // flex-direction: column;
+    // justify-content: space-around;
+    
+
     width: 100%;
     max-width: 340px;
     height: 340px;
     border: 1px solid transparent;
-    border-radius: 0.6rem;
+    border-radius: 10px;
     cursor: pointer;
-    gap: 1rem;
+    gap: 3rem;
     position: relative;
 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 0.6rem;
+        border-radius: 10px;
     }
 
     .card-info {
+        width: 40%;
         position: absolute;
         bottom: 0%;
-        left: 34%;
+        left: 20%;
         @include gradient-box;
     }
 
@@ -31,15 +38,20 @@
         font-weight: 300;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     }
+}
 
-    @media screen and (max-width: 560px) {
-        .cards {
-            max-width: 335px;
-            height: 255px;
-        }
+@media screen and (max-width: 560px) {
+    .cards {
+        width: 100%;
+        max-width: 335px;
+        height: 255px;
 
-        h3 {
-            font-size: 16px;
+        gap: 1rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 }

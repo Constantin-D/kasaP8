@@ -29,7 +29,7 @@ const Slider = ({ pictures }) => {
             <img
                 src={pictures[currentIndex]}
                 alt={`slide ${currentIndex}`}
-                className="silder-image"
+                className="slider-image"
             />
             <button onClick={nextSlide} className="right-arrow">
                 <img src={arrowNext} alt="Next slide" />

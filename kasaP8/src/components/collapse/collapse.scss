@@ -39,13 +39,12 @@
         overflow: hidden;
         list-style: none;
         padding: 0 1rem;
-        transition: max-height 0.5s ease, padding 0.5s ease;
+        transition: max-height 0.3s ease, padding 0.5s ease;
         background-color: $background-content;
         color: $color-secondary;
     }
 
     &.open .collapse-content {
-        // display: block;
         max-height: 100vh;
         padding: 1rem;
     }
@@ -58,6 +57,7 @@
 @media screen and (max-width: 768px) {
     .collapse {
         margin-bottom: 20px;
+
         .collapse-title {
             p {
                 font-size: 18px;
@@ -70,22 +70,33 @@
         }
 
         .collapse-content {
-            font-size: 12px;
+            font-size: 18px;
             margin: 0;
         }
     }
-    
+
 }
 
 @media screen and (max-width: 560px) {
     .collapse {
         margin-bottom: 20px;
+
         .collapse-title {
             p {
                 font-size: 13px;
             }
+
+            img {
+                width: 16px;
+                height: 9px;
+            }
+        }
+
+        .collapse-content {
+            font-size: 12px;
+            margin: 0;
         }
     }
 
-    
+
 }

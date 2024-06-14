@@ -5,7 +5,7 @@ import "./cards.scss";
 const Cards = ({ id, image, name }) => {
     return (
         <div className="cards">
-            <Link to={`/apartment/${id}`} className="card-link">
+            <Link to={`/apartment/${id}`} >
                 <img src={image} alt="Image de la location" />
                 <div className="card-info">
                     <h3>{name}</h3>

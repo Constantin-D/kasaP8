@@ -8,15 +8,16 @@
     height: 415px;
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 25px;
+    // border-radius: 25px;
     // justify-content: center;
     //     align-items: center;
 
     .slider-image {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        object-fit: cover;
         object-position: center;
+        border-radius: 10px;
     }
 
     .left-arrow,
@@ -62,14 +63,14 @@
 
 @media screen and (max-width: 560px) {
     .slider {
-        max-width: 335px;
+        max-width: 100%;
         height: 255px;
-        border-radius: 10px;
 
         .slider-image {
-            object-fit: contain;
+            object-fit: cover;
             height: auto;
             max-height: 100%;
+            border-radius: 10px;
         }
 
         .left-arrow,
