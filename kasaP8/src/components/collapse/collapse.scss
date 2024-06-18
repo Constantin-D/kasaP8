@@ -1,4 +1,3 @@
-// // collapse.scss 
 @use "../../sass/variables" as *;
 
 .collapse {
@@ -37,16 +36,21 @@
         max-height: 0;
         border-radius: 0 0 5px 5px;
         overflow: hidden;
-        list-style: none;
         padding: 0 1rem;
         transition: max-height 0.3s ease, padding 0.5s ease;
         background-color: $background-content;
         color: $color-secondary;
+
+        .equipment-list {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
     }
 
     &.open .collapse-content {
         max-height: 100vh;
-        padding: 1rem;
+        padding:  1rem;
     }
 
     &.open .collapse-title img {
@@ -79,7 +83,6 @@
 
 @media screen and (max-width: 560px) {
     .collapse {
-        margin-bottom: 20px;
 
         .collapse-title {
             p {
@@ -97,6 +100,4 @@
             margin: 0;
         }
     }
-
-
 }

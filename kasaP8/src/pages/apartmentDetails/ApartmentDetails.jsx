@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
-import Collapse from "../../components/collapse/Collapse";
-import HostInfo from "../../components/hostInfo/HostInfo";
-import RatingStar from "../../components/ratingStar/RatingStar";
+import ApartmentInfoLeft from "../../components/apartmentInfoLeft/ApartmentInfoLeft";
+import ApartmentInfoRight from "../../components/apartmentInfoRight/ApartmentInfoRight";
+import ApartmentDescription from "../../components/apartmentDescription/ApartmentDescription";
+// import Collapse from "../../components/collapse/Collapse";
+// import HostInfo from "../../components/hostInfo/HostInfo";
+// import RatingStar from "../../components/ratingStar/RatingStar";
 import Slider from "../../components/slider/Slider";
-import TagList from "../../components/tagList/TagList";
-import "./apartment-container.scss";
+// import TagList from "../../components/tagList/TagList";
 import "./apartment-details.scss";
 
 const ApartmentDetails = () => {
@@ -18,13 +19,13 @@ const ApartmentDetails = () => {
         fetch("/RentalHouses.json")
             .then((response) => response.json())
             .then((data) => {
-                console.log("Data fetched:", data); // Debug
+                console.log("Data fetched:", data); 
                 const apartment = data.find((apartment) => apartment.id === id);
                 if (!apartment) {
                     navigate("/*");
                     return;
                 }
-                console.log("Apartment found:", apartment); // Debug
+                // console.log("Apartment found:", apartment); 
                 setApartment(apartment);
             })
             .catch((error) => {
@@ -43,35 +44,20 @@ const ApartmentDetails = () => {
         <div className="apartment-details">
             <Slider pictures={apartment.pictures} />
             <div className="apartment-info">
-                <div className="apartment-info-left">
-                    <h1>{apartment.title}</h1>
-                    <p>{apartment.location}</p>
-                    <TagList tags={apartment.tags} />
-                </div>
-                <div className="apartment-info-right">
-                    <HostInfo
-                        picture={apartment.host.picture}
-                        name={apartment.host.name}
-                    />
-                    <RatingStar rating={parseInt(apartment.rating)} />
-                </div>
-            </div>
-            <div className="apartment-collapse">
-                <Collapse
-                    title="Description"
-                    content={<p>{apartment.description}</p>}
+                <ApartmentInfoLeft
+                    title={apartment.title}
+                    location={apartment.location}
+                    tags={apartment.tags}
                 />
-                <Collapse
-                    title="Équipements"
-                    content={
-                        <ul className="equipment-list">
-                            {apartment.equipments.map((equipment, index) => (
-                                <li key={index}>{equipment}</li>
-                            ))}
-                        </ul>
-                    }
+                <ApartmentInfoRight
+                    host={apartment.host}
+                    rating={apartment.rating}
                 />
             </div>
+            <ApartmentDescription
+                description={apartment.description}
+                equipments={apartment.equipments}
+            />
         </div>
     );
 };

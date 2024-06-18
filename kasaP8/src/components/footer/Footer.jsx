@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import LogoFooter from "../../assets/images/logo-footer.png";
 import "./footer.scss";
 
@@ -9,7 +9,6 @@ const Footer = () => {
                 <img src={LogoFooter} alt="Logo de Kasa" />
             </div>
             <div>
-                {/* <a href="/">Accueil</a> */}
                 <p>
                     <span>© 2020 Kasa. All</span> 
                     <span>rights reserved</span>

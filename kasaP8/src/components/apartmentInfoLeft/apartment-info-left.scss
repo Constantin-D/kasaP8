@@ -1,0 +1,38 @@
+@use "../../sass/variables" as *;
+
+.apartment-info-left {
+    h1 {
+        font-size: 36px;
+        font-weight: 500;
+        color: $color-primary;
+        margin: 0 0 10px;
+    }
+
+    p {
+        font-size: 15px;
+        color: $color-secondary;
+        font-weight: 500;
+        margin: 0 0 20px;
+    }
+
+    .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .apartment-info-left {
+        flex-direction: column;
+        align-items: flex-start;
+
+        h1 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}

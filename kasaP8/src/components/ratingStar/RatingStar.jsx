@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import starActive from "../../assets/images/star-active.png";
 import starInactive from "../../assets/images/star-inactive.png"
 import "./rating-star.scss";

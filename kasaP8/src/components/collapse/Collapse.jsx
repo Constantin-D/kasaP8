@@ -1,6 +1,5 @@
-// import React from "react";
-import PropTypes from "prop-types";
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import arrowDown from "../../assets/images/arrow-down.png";
 import arrowUp from "../../assets/images/arrow-up.png";
 import "./collapse.scss";
@@ -19,11 +18,8 @@ const Collapse = ({ title, content }) => {
                 <img
                     src={isOpen ? arrowUp : arrowDown}
                     alt={isOpen ? "Flèche vers le haut" : "Flèche vers le bas"}
-                    // className="collapse-icon"
-                    // className={`collapse-icon ${isOpen ? "rotate" : ""}`}
                 />
             </div>
-            {/* {isOpen && <div className="collapse-content">{content}</div>} */}
             <div className="collapse-content">{content}</div>
         </div>
     );

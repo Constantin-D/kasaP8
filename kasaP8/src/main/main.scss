@@ -1,7 +1,17 @@
 //base
 @use "../app/app.scss";
 
+//pages
+@use "../pages/home/home-container.scss";
+@use "../pages/home/gallery.scss";
+@use "../pages/apartmentDetails/apartment-details.scss";
+@use "../pages/about/about-container.scss";
+@use "../pages/notFound/not-found.scss";
+
 //components
+@use "../components/apartmentInfoLeft/apartment-info-left.scss";
+@use "../components/apartmentInfoRight/apartment-info-right.scss";
+@use "../components/apartmentDescription/apartment-description.scss";
 @use "../components/banner/banner.scss";
 @use "../components/cards/Cards.scss";
 @use "../components/collapse/collapse.scss";
@@ -9,19 +19,9 @@
 @use "../components/slider/slider.scss";
 @use "../components/tagList/tag-list.scss";
 
-
 //layout
 @use "../components/header/header.scss";
 @use "../components/footer/footer.scss";
-
-//pages
-@use "../pages/home/home-container.scss";
-@use "../pages/home/gallery.scss";
-@use "../pages/apartmentDetails/apartment-container.scss";
-@use "../pages/apartmentDetails/apartment-details.scss";
-@use "../pages/about/about-container.scss";
-@use "../pages/notFound/not-found.scss";
-
 
 //utils
 @use "../sass/variables.scss";

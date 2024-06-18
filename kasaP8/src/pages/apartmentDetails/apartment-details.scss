@@ -1,7 +1,10 @@
 @use "../../sass/variables" as *;
 
 .apartment-details {
-    margin-bottom: 50px;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    margin-bottom: 40px;
 
     .slider {
         margin-bottom: 30px;
@@ -10,68 +13,19 @@
     .apartment-info {
         display: flex;
         justify-content: space-between;
-        // margin: 30px 0;
 
         .apartment-info-left,
         .apartment-info-right {
             display: flex;
             flex-direction: column;
         }
-
-        .apartment-info-left {
-
-            h1 {
-                font-size: 36px;
-                font-weight: 500;
-                color: $color-primary;
-                margin: 0 0 10px;
-            }
-
-            p {
-                font-size: 15px;
-                color: $color-secondary;
-                font-weight: 500;
-                margin: 0 0 20px;
-            }
-
-            .tag-list {
-                display: flex;
-                flex-wrap: wrap;
-                margin-bottom: 24px;
-            }
-        }
-
-        .apartment-info-right {
-            display: flex;
-            align-items: end;
-
-
-            .host-info {
-                margin-bottom: 27px;
-
-                .host-name span {
-                        padding-bottom: 5px;
-                    }
-            }
-        }
-    }
-
-    .apartment-collapse {
-        display: flex;
-        justify-content: space-between;
-        gap: 75px;
-    }
-
-    .equipment-list {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
     }
 }
 
 @media screen and (max-width: 560px) {
     .apartment-details {
         margin-bottom: 27px;
+        padding: 0 0.5rem;
 
         .slider {
             margin-bottom: 15px;
@@ -79,49 +33,29 @@
 
         .apartment-info {
             flex-direction: column;
-
-            .apartment-info-left,
-            .apartment-info-right {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .apartment-info-left {
-                h1 {
-                    font-size: 18px;
-                }
-
-                p {
-                    font-size: 14px;
-                }
-            }
-
-            .apartment-info-right {
-                flex-direction: row;
-                justify-content: space-between;
-                width: 100%;
-                align-items: center;
-                margin-bottom: 13px;
-
-                .host-info {
-                    margin: 0;
-                    order: 2;
-
-                    .host-name span {
-                        padding-bottom: 5px;
+            
+            // @media screen and (max-width: 560px) {
+                    .apartment-info-right {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 100%;
+                        align-items: center;
+                        margin-bottom: 13px;
+            
+                        .host-info {
+                            margin: 0;
+                            order: 2;
+            
+                            .host-name span {
+                                padding-bottom: 5px;
+                            }
+                        }
+            
+                        .rating-star {
+                            order: 1;
+                        }
                     }
-                }
-
-                .rating-star {
-                    order: 1;
-                }
-            }
-
-        }
-
-        .apartment-collapse {
-            flex-direction: column;
-            gap: 0px;
+                // }
         }
     }
 }

@@ -1,0 +1,37 @@
+@use "../../sass/variables" as *;
+
+.apartment-info-right {
+    display: flex;
+    align-items: end;
+
+    .host-info {
+        margin-bottom: 27px;
+
+        .host-name span {
+            padding-bottom: 5px;
+        }
+    }
+}
+// Conflict with host-info
+// @media screen and (max-width: 560px) {
+//     .apartment-info-right {
+//         flex-direction: row;
+//         justify-content: space-between;
+//         width: 100%;
+//         align-items: center;
+//         margin-bottom: 13px;
+
+//         .host-info {
+//             margin: 0;
+//             order: 2;
+
+//             .host-name span {
+//                 padding-bottom: 5px;
+//             }
+//         }
+
+//         .rating-star {
+//             order: 1;
+//         }
+//     }
+// }

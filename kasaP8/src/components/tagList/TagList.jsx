@@ -1,9 +1,9 @@
-import React from "react";
+// import React from "react";
 import PropTypes from "prop-types";
 import "./tag-list.scss";
 
 const TagList = ({tags}) => {
-    console.log("Tags:", tags); // Debug
+    // console.log("Tags:", tags); 
     return (
         <div className="tag-list">
             {tags.map((tag, index) => (

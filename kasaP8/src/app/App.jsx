@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "../components/footer/Footer.jsx";
 import Header from "../components/header/Header.jsx";
@@ -13,7 +13,7 @@ const App = () => {
         <BrowserRouter>
             <div id="app">
                 <Header />
-                <div className="main-content">
+                <main>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
@@ -23,7 +23,7 @@ const App = () => {
                     />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
-                </div>
+                </main>
                 <Footer />
             </div>
         </BrowserRouter>

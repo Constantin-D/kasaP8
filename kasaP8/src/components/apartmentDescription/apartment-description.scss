@@ -1,0 +1,14 @@
+@use "../../sass/variables" as *;
+
+.apartment-description {
+            display: flex;
+            justify-content: space-between;
+            gap: 75px;     
+}
+
+@media screen and (max-width: 560px) {
+    .apartment-description {
+                flex-direction: column;
+                gap: 0px;
+    }
+}
