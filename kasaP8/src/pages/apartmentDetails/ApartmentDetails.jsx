@@ -3,11 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import ApartmentInfoLeft from "../../components/apartmentInfoLeft/ApartmentInfoLeft";
 import ApartmentInfoRight from "../../components/apartmentInfoRight/ApartmentInfoRight";
 import ApartmentDescription from "../../components/apartmentDescription/ApartmentDescription";
-// import Collapse from "../../components/collapse/Collapse";
-// import HostInfo from "../../components/hostInfo/HostInfo";
-// import RatingStar from "../../components/ratingStar/RatingStar";
 import Slider from "../../components/slider/Slider";
-// import TagList from "../../components/tagList/TagList";
 import "./apartment-details.scss";
 
 const ApartmentDetails = () => {
@@ -19,7 +15,7 @@ const ApartmentDetails = () => {
         fetch("/RentalHouses.json")
             .then((response) => response.json())
             .then((data) => {
-                console.log("Data fetched:", data); 
+                // console.log("Data fetched:", data); 
                 const apartment = data.find((apartment) => apartment.id === id);
                 if (!apartment) {
                     navigate("/*");
