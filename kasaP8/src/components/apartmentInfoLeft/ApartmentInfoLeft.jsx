@@ -1,5 +1,5 @@
 // import React from "react";
-import TagList from "../tagList/TagList";
+import TagList from "../TagList/TagList";
 import "./apartment-info-left.scss";
 
 const ApartmentInfoLeft = ({ title, location, tags }) => (

@@ -12,7 +12,7 @@ const Home = () => {
         fetch("/RentalHouses.json")
             .then((response) => response.json())
             .then((data) => {
-                console.log("Data fetched:", data); // Debug
+                // console.log("Data fetched:", data); 
                 setRentalHouses(data);
             })
             .catch((error) => {

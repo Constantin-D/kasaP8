@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import ApartmentInfoLeft from "../../components/apartmentInfoLeft/ApartmentInfoLeft";
-import ApartmentInfoRight from "../../components/apartmentInfoRight/ApartmentInfoRight";
-import ApartmentDescription from "../../components/apartmentDescription/ApartmentDescription";
-import Slider from "../../components/slider/Slider";
+import ApartmentInfoLeft from "../../components/ApartmentInfoLeft/ApartmentInfoLeft";
+import ApartmentInfoRight from "../../components/ApartmentInfoRight/ApartmentInfoRight";
+import ApartmentDescription from "../../components/ApartmentDescription/ApartmentDescription";
+import Slider from "../../components/Slider/Slider";
 import "./apartment-details.scss";
 
 const ApartmentDetails = () => {
@@ -18,7 +18,7 @@ const ApartmentDetails = () => {
                 // console.log("Data fetched:", data); 
                 const apartment = data.find((apartment) => apartment.id === id);
                 if (!apartment) {
-                    navigate("/*");
+                    navigate("/error");
                     return;
                 }
                 // console.log("Apartment found:", apartment); 

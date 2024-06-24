@@ -1,6 +1,6 @@
 // import React from "react";
-import HostInfo from "../hostInfo/HostInfo";
-import RatingStar from "../ratingStar/RatingStar";
+import HostInfo from "../HostInfo/HostInfo";
+import RatingStar from "../RatingStar/RatingStar";
 import "./apartment-info-right.scss";
 
 const ApartmentInfoRight = ({ host, rating }) => (

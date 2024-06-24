@@ -23,17 +23,21 @@ const Slider = ({ pictures }) => {
 
     return (
         <div className="slider">
+            {pictures.length > 1 && (
             <button onClick={prevSlide} className="left-arrow">
                 <img src={arrowPrev} alt="Previous slide" />
             </button>
+            )}
             <img
                 src={pictures[currentIndex]}
                 alt={`slide ${currentIndex}`}
                 className="slider-image"
             />
+            {pictures.length > 1 && (
             <button onClick={nextSlide} className="right-arrow">
                 <img src={arrowNext} alt="Next slide" />
             </button>
+            )}
             {pictures.length>1 && <div className="slider-index">
                 {currentIndex + 1} / {pictures.length}
             </div>}

@@ -1,5 +1,5 @@
 // import React from "react";
-import Collapse from "../collapse/Collapse";
+import Collapse from "../Collapse/Collapse";
 import "./apartment-description.scss";
 
 const ApartmentDescription = ({ description, equipments }) => (

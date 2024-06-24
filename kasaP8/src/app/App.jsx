@@ -2,10 +2,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "../components/footer/Footer.jsx";
 import Header from "../components/header/Header.jsx";
-import About from "../pages/about/About.jsx";
-import ApartmentDetails from "../pages/apartmentDetails/ApartmentDetails.jsx";
-import Home from "../pages/home/Home.jsx";
-import NotFound from "../pages/notFound/NotFound.jsx";
+import About from "../pages/About/About.jsx";
+import ApartmentDetails from "../pages/ApartmentDetails/ApartmentDetails.jsx";
+import Home from "../pages/Home/Home.jsx";
+import NotFound from "../pages/NotFound/NotFound.jsx";
 import "./app.scss";
 
 const App = () => {
