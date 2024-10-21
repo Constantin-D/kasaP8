@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import banner from "../../assets/images/Banner.png";
-import Banner from "../../components/banner/Banner";
-import Cards from "../../components/cards/Cards";
+import Banner from "../../components/Banner/Banner";
+import Cards from "../../components/Cards/Cards";
 import "./gallery.scss";
 import "./home-container.scss";
 

@@ -1,7 +1,7 @@
 // import React from "react";
 import bannerAbout from "../../assets/images/BannerAbout.png";
-import Banner from "../../components/banner/Banner";
-import Collapse from "../../components/collapse/Collapse";
+import Banner from "../../components/Banner/Banner";
+import Collapse from "../../components/Collapse/Collapse";
 import "./about-container.scss";
 
 const About = () => {
